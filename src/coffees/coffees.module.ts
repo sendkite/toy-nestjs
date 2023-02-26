@@ -23,7 +23,7 @@ export class CoffeeBrandsFactory {
     {
       provide: COFFEE_BRANDS,
       useFactory: async (dataSource: DataSource): Promise<string[]> => {
-        // const coffeeBrands = await connection.query('SELECT * ...');
+        // const coffeeBrands = await dataSource.query('SELECT * ...');
         const coffeeBrands = await Promise.resolve(['buddy brew', 'nescafe']);
         return coffeeBrands;
       },
